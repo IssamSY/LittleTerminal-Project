@@ -15,12 +15,12 @@ struct Directory {
 	char name[MAX_NAME_LENGHT];
 	struct File files[MAX_FILES_LENGHT];
 	int files_number;
-}
+};
 
 struct MegaDirectory {
 	char name[MAX_NAME_LENGHT];
 	struct Directory directories[MAX_DIRECTORIES_LENGHT];
-}
+};
 
 int main() {
 	// Creating files using `struct File`
