@@ -44,7 +44,21 @@ int main() {
 	struct Directory user;
 	snprintf(user.name, sizeof(user.name), "user");
 
-	//Adding `user_info.txt` to `user` directory in position 0
+	// Adding `user_info.txt` to `user` directory in position 0
 	strcpy(user.files[0].name, user_info.name);
 	strcpy(user.files[0].content, user_info.content); 
+
+	// Creating `root` MegaDirectory using `struct MegaDirectory`
+	struct MegaDirectory root;
+	snprintf(root.name, sizeof(root.name), "root");
+
+	// Adding `sysbin` directory to `root` mega-directory in position 0
+	strcpy(root.directories[0].name, sysbin.name);
+	memcpy(&root.directories[0].files, &sysbin.files, sizeof(sysbin.files));
+
+	// Adding `user` directory to `root` mega-directory in position 1
+	strcpy(root.directories[0].name, user.name);
+	memcpy(&root.directories[0].files, &user.files, sizeof(user.files));
+
+	
  }
