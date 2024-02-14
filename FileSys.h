@@ -1,7 +1,5 @@
 /*
 	Created by S. Issam
-	Copyright 452
-	You may use or redistribute this file, however you have to credit the creator.
 */
 #ifndef SYSFILE_H
 #define SYSFILE_H
