@@ -27,8 +27,25 @@ struct MegaDirectory {
 };
 
 // Function Prototype
-struct File createFile(char* name, char* content);
-struct Directory createDirectory(char* name, struct File files, int files_number); 
-struct MegaDirectory createMegaDirectory(char* name, struct Directory directories);
+struct File createFile(char* name, char* content) {
+	struct File newFile;
+	strcpy(newFile.name, name);
+	strcpy(newFile.content, content);
+	return newFile;
+};
+
+struct Directory createDirectory(char* name, struct File files, int files_number) {
+	struct Directory newDirectory;
+	strcpy(newDirectory.name, name);
+	memcpy(&newDirectory.files, files, sizeof(struct Directory));
+	newDirectory.files_number = files_number;
+	return newDirectory;
+}; 
+
+struct MegaDirectory createMegaDirectory(char* name, struct Directory directories) {
+	struct MegaDirectory newMegaDirectory;
+	strcpy(newMegaDirectory.name, name);
+	memcpy(&newMegaDirectory.directories, directories, sizeof(struct MegaDirectory));
+};
 
 #endif
