@@ -8,3 +8,8 @@ This project is about creating a LittleTerminal from zero. And no priore knowled
   -  ``` writetexty``` for overwriting the content of the text file.
   -  ``` lt-version``` for displaying the current version of the **LittleTerminal**.
 - Navigation system to jump from directory to another.
+
+
+# LittleTerminal updates log:
+Feb 17th, 2024:
+-  Adding prompts, and the ability to write commands.
